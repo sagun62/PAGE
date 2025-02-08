@@ -33,5 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			navUp.style.display = 'flex';
 			navCenter.style.display = 'flex';
 		}
+
+		if (window.matchMedia('(max-width: 992px)').matches) {
+			navUp.style.display = 'none';
+			navCenter.style.display = 'none';
+		}
 	});
 });

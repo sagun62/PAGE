@@ -270,6 +270,46 @@ body {
 	}
 	&__mobile {
 		display: none;
+		width: 100%;
+		height: 100%;
+		background-color: $background;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		&__hamburger {
+			width: 20%;
+			height: 100%;
+			display: flex;
+			justify-content: left;
+			align-items: center;
+			padding-left: 2rem;
+			i {
+				padding: 2rem;
+				transition: 0.5s;
+				font-size: 1.8rem;
+				&:hover {
+					color: $thirdText-color;
+					transform: scale(-1);
+				}
+			}
+		}
+
+		&__icon {
+			width: 80%;
+			height: 100%;
+			display: flex;
+			justify-content: right;
+			align-items: center;
+			padding-right: 4rem;
+			i {
+				padding: 2rem;
+				transition: 0.5s;
+				font-size: 1.8rem;
+				&:hover {
+					color: $thirdText-color;
+				}
+			}
+		}
 	}
 }
 .slider {
@@ -359,6 +399,7 @@ body {
 		&.small {
 		}
 		&__up {
+			display: none;
 			&__left {
 				display: none;
 			}
