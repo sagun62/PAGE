@@ -270,23 +270,125 @@ body {
 	}
 	&__mobile {
 		display: none;
+		position: relative;
 		width: 100%;
 		height: 100%;
 		background-color: $background;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		&__logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 50%;
+			height: 5vh;
+			background-color: #ffffff;
+			img {
+				width: 65%;
+			}
+		}
 		&__hamburger {
-			width: 20%;
+			width: 25%;
 			height: 100%;
 			display: flex;
+
 			justify-content: left;
 			align-items: center;
 			padding-left: 2rem;
 			i {
 				padding: 2rem;
 				transition: 0.5s;
-				font-size: 1.8rem;
+				font-size: 2rem;
+				&:hover {
+					color: $thirdText-color;
+					transform: scale(-1);
+				}
+			}
+		}
+		&__navPage {
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			background-color: $background;
+			i {
+				padding-top: 1em;
+				font-size: 1.5rem;
+			}
+			&.active {
+				display: flex;
+			}
+			&-logo {
+				width: 100%;
+				display: flex;
+				background-color: $background;
+				align-items: center;
+				height: 10vh;
+				margin-top: 1rem;
+				width: 100%;
+				justify-content: center;
+				img {
+					width: 30%;
+				}
+			}
+			&__menu {
+				width: 100%;
+				list-style-type: none;
+				font-size: 2rem;
+
+				padding: 1em 2em;
+				a {
+					text-decoration: none;
+					color: $mainText-color;
+				}
+				ul {
+					list-style-type: none;
+					padding: 1em;
+				}
+				li {
+					padding: 1em;
+					border-top: 2px solid rgb(18, 1, 1);
+					margin-top: 2px;
+					&:last-child {
+						border-bottom: 2px solid rgb(18, 1, 1);
+					}
+				}
+				&__item {
+					li {
+						padding: 1em;
+						border-top: 2px solid rgb(18, 1, 1);
+						margin-top: 2px;
+						&:last-child {
+							border-bottom: 2px solid rgb(18, 1, 1);
+						}
+					}
+					i {
+						font-size: 2rem;
+						padding: 0;
+						margin-right: 1em;
+					}
+					input {
+						margin-left: 1em;
+						padding: 0;
+						width: 50%;
+						border: 1px solid black;
+						border-radius: 5px;
+					}
+				}
+			}
+			.x-close {
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 3rem;
+				font-size: 2.2rem;
+				transition: 0.5s;
 				&:hover {
 					color: $thirdText-color;
 					transform: scale(-1);
@@ -295,16 +397,17 @@ body {
 		}
 
 		&__icon {
-			width: 80%;
+			width: 25%;
 			height: 100%;
 			display: flex;
 			justify-content: right;
+
 			align-items: center;
-			padding-right: 4rem;
+			padding-right: 2rem;
 			i {
 				padding: 2rem;
 				transition: 0.5s;
-				font-size: 1.8rem;
+				font-size: 2rem;
 				&:hover {
 					color: $thirdText-color;
 				}

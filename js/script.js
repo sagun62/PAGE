@@ -39,4 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			navCenter.style.display = 'none';
 		}
 	});
+
+	const burger = document.querySelector('.burger');
+	const navPage = document.querySelector('.nav__mobile__navPage');
+	const xClose = document.querySelector('.x-close');
+	burger.addEventListener('click', function () {
+		navPage.classList.add('active');
+	});
+	xClose.addEventListener('click', function () {
+		navPage.classList.remove('active');
+	});
 });
