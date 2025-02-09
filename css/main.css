@@ -186,12 +186,13 @@ body {
   opacity: 0;
   display: flex;
   width: 98%;
-  height: 30vh;
+  height: auto;
   border-radius: 5px;
   border: 2px solid rgb(225, 196, 144);
   align-items: flex-start;
   justify-content: space-around;
   padding: 1em;
+  padding-bottom: 3em;
   top: 6vh;
   left: 1vw;
   right: 1vw;
@@ -287,6 +288,22 @@ body {
 .nav__mobile__logo img {
   width: 65%;
 }
+.nav__mobile__icon {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 2rem;
+}
+.nav__mobile__icon i {
+  padding: 2rem;
+  transition: 0.5s;
+  font-size: 2.5rem;
+}
+.nav__mobile__icon i:hover {
+  color: rgb(225, 196, 144);
+}
 .nav__mobile__hamburger {
   width: 25%;
   height: 100%;
@@ -298,7 +315,7 @@ body {
 .nav__mobile__hamburger i {
   padding: 2rem;
   transition: 0.5s;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .nav__mobile__hamburger i:hover {
   color: rgb(225, 196, 144);
@@ -450,22 +467,6 @@ body {
 .nav__mobile__navPage .x-close:hover {
   color: rgb(225, 196, 144);
   transform: scale(-1);
-}
-.nav__mobile__icon {
-  width: 25%;
-  height: 100%;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  padding-right: 2rem;
-}
-.nav__mobile__icon i {
-  padding: 2rem;
-  transition: 0.5s;
-  font-size: 2rem;
-}
-.nav__mobile__icon i:hover {
-  color: rgb(225, 196, 144);
 }
 
 .slider {

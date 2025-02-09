@@ -182,12 +182,13 @@ body {
 			opacity: 0;
 			display: flex;
 			width: 98%;
-			height: 30vh;
+			height: auto;
 			border-radius: 5px;
 			border: 2px solid $thirdText-color;
 			align-items: flex-start;
 			justify-content: space-around;
 			padding: 1em;
+			padding-bottom: 3em;
 			top: 6vh;
 			left: 1vw;
 			right: 1vw;
@@ -289,6 +290,22 @@ body {
 				width: 65%;
 			}
 		}
+		&__icon {
+			width: 25%;
+			height: 100%;
+			display: flex;
+			justify-content: right;
+			align-items: center;
+			padding-right: 2rem;
+			i {
+				padding: 2rem;
+				transition: 0.5s;
+				font-size: 2.5rem;
+				&:hover {
+					color: $thirdText-color;
+				}
+			}
+		}
 		&__hamburger {
 			width: 25%;
 			height: 100%;
@@ -300,7 +317,7 @@ body {
 			i {
 				padding: 2rem;
 				transition: 0.5s;
-				font-size: 2rem;
+				font-size: 2.5rem;
 				&:hover {
 					color: $thirdText-color;
 					transform: scale(-1);
@@ -457,24 +474,6 @@ body {
 				&:hover {
 					color: $thirdText-color;
 					transform: scale(-1);
-				}
-			}
-		}
-
-		&__icon {
-			width: 25%;
-			height: 100%;
-			display: flex;
-			justify-content: right;
-
-			align-items: center;
-			padding-right: 2rem;
-			i {
-				padding: 2rem;
-				transition: 0.5s;
-				font-size: 2rem;
-				&:hover {
-					color: $thirdText-color;
 				}
 			}
 		}
