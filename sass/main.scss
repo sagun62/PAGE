@@ -284,10 +284,12 @@ body {
 			justify-content: center;
 			align-items: center;
 			width: 50%;
-			height: 5vh;
+			height: 100%;
 			background-color: #ffffff;
 			img {
-				width: 65%;
+				width: 50%;
+				max-height: 100%;
+				object-fit: cover;
 			}
 		}
 		&__icon {
@@ -558,9 +560,18 @@ body {
 	}
 }
 // MEDIA
+@media screen and (orientation: landscape) {
+    .nav{
+		&__mobile{
+			img{
+				width: 40%;
+			}
+		}
+	}
+}
 @media (max-width: 992px) {
 	.nav {
-		height: 8vh;
+		height: 10vh;
 		flex-direction: row;
 		padding: 0 2rem;
 		&.small {
@@ -591,6 +602,6 @@ body {
 		}
 	}
 	.slider {
-		margin-top: 8vh;
+		margin-top: 10vh;
 	}
 }
