@@ -346,10 +346,6 @@ body {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
-.nav__mobile__navPage__menu ul {
-  list-style-type: none;
-  padding: 1em;
-}
 .nav__mobile__navPage__menu li {
   padding: 1em;
   border-top: 2px solid rgb(18, 1, 1);
@@ -357,6 +353,21 @@ body {
 }
 .nav__mobile__navPage__menu li:last-child {
   border-bottom: 2px solid rgb(18, 1, 1);
+}
+.nav__mobile__navPage__menu__item__submenu {
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(-10px);
+}
+.nav__mobile__navPage__menu__item__submenu.active {
+  opacity: 1;
+  padding-top: 1em;
+  height: auto;
+  visibility: visible;
+  transform: translateY(0);
 }
 .nav__mobile__navPage__menu__item li {
   padding: 1em;
@@ -370,6 +381,7 @@ body {
   font-size: 2rem;
   padding: 0;
   margin-right: 1em;
+  cursor: pointer;
 }
 .nav__mobile__navPage__menu__item input {
   margin-left: 1em;
@@ -377,6 +389,49 @@ body {
   width: 50%;
   border: 1px solid black;
   border-radius: 5px;
+}
+.nav__mobile__navPage__menu__item .moreSubMenu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__mobile__navPage__menu__item .moreSubMenu .moreSubMenuBTN {
+  transition: 0.7s;
+}
+.nav__mobile__navPage__menu__item .moreSubMenu .moreSubMenuBTN.rotate {
+  transform: rotate(180deg);
+  color: rgb(225, 196, 144);
+}
+.nav__mobile__navPage .search {
+  display: flex;
+  padding: 0.5em 2em;
+  width: 100%;
+  height: 5vh;
+  cursor: pointer;
+  justify-content: left;
+  align-items: flex-start;
+}
+.nav__mobile__navPage .search i {
+  margin-top: 0.4em;
+  margin-left: 2em;
+  margin-right: 0.5em;
+  padding: 0;
+  font-size: 2.1rem;
+  cursor: pointer;
+}
+.nav__mobile__navPage .search input {
+  width: 50%;
+  height: 4vh;
+  font-size: 1.8rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.nav__mobile__navPage .search input:focus {
+  border: 1px solid rgb(225, 196, 144);
+  outline: none;
 }
 .nav__mobile__navPage .x-close {
   position: absolute;

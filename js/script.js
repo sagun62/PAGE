@@ -49,4 +49,24 @@ document.addEventListener('DOMContentLoaded', function () {
 	xClose.addEventListener('click', function () {
 		navPage.classList.remove('active');
 	});
+
+	const moreSubMenuBTN = document.querySelector('.moreSubMenuBTN');
+	const subMenu = document.querySelector(
+		'.nav__mobile__navPage__menu__item__submenu'
+	);
+
+	moreSubMenuBTN.addEventListener('click', function () {
+		moreSubMenuBTN.classList.toggle('rotate');
+	});
+
+	moreSubMenuBTN.addEventListener('click', function () {
+		subMenu.classList.toggle('active');
+		
+	});
+	// moreSubMenuBTN.addEventListener('click', function () {
+	// 	if (subMenu.classList.contains('active')) {
+	// 		subMenu.classList.toggle('active');
+	// 		subMenu.classList.add('hiding');
+	// 	}
+	// });
 });
