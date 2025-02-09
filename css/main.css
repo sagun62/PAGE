@@ -405,6 +405,10 @@ body {
   transform: rotate(180deg);
   color: rgb(225, 196, 144);
 }
+.nav__mobile__navPage .menuPhone {
+  margin: 1em 0 3em 0;
+  text-decoration: none;
+}
 .nav__mobile__navPage .search {
   display: flex;
   padding: 0.5em 2em;
