@@ -315,10 +315,12 @@ body {
   align-items: center;
   justify-content: flex-start;
   background-color: rgb(255, 255, 255);
+  overflow-y: auto;
 }
 .nav__mobile__navPage i {
   padding-top: 1em;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 .nav__mobile__navPage.active {
   display: flex;

@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	moreSubMenuBTN.addEventListener('click', function () {
 		subMenu.classList.toggle('active');
-		
 	});
 	// moreSubMenuBTN.addEventListener('click', function () {
 	// 	if (subMenu.classList.contains('active')) {
