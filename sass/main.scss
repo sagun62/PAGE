@@ -748,6 +748,10 @@ body {
 					margin: 1em 0 3em 0;
 					text-decoration: none;
 					font-size: 1.2rem;
+					a {
+						text-decoration: none;
+						color: $mainText-color;
+					}
 				}
 				.search {
 					width: 80%;
