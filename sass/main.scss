@@ -39,7 +39,7 @@ body {
 	z-index: 1000;
 	&.small {
 		height: 8vh; /* Mniejsze menu po scrollu */
-
+		border-bottom: 2px solid $thirdText-color;
 		flex-direction: row; /* Pozycjonowanie poziome */
 		justify-content: space-between;
 		padding: 0 2rem;
@@ -95,10 +95,11 @@ body {
 			justify-content: center;
 			align-items: center;
 			width: 60%;
-			height: 80%;
+			height: 70%;
 			font-size: 1.4rem;
-			color: $secondText-color;
-			background-color: $textDecoration-color;
+			color: $mainText-color;
+			background-color: $thirdText-color;
+			opacity: 0.6;
 		}
 		&__icon {
 			width: 18%;
@@ -577,8 +578,28 @@ body {
 	background-color: grey;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
+	&__box {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		&__item {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			opacity: 0;
+			visibility: hidden;
+			transition: 1s all ease-in-out;
+			&.active {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
 }
+// SLIDER-KONIEC
 .main {
 	background-color: $background;
 }
@@ -587,6 +608,7 @@ body {
 	height: 45vh;
 	background-color: teal;
 	display: flex;
+	margin-top: 10em;
 	justify-content: center;
 	align-items: center;
 	&__box {
