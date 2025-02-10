@@ -443,6 +443,15 @@ body {
   text-decoration: none;
   font-size: 1.55rem;
   transition: 0.3s ease-in-out;
+  color: rgb(0, 0, 0);
+}
+.nav__mobile__navPage .menuPhone a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.nav__mobile__navPage .menuPhone i {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 .nav__mobile__navPage .menuPhone:hover {
   color: rgb(225, 196, 144);
@@ -684,15 +693,6 @@ body {
     margin: 1em 0 3em 0;
     text-decoration: none;
     font-size: 1.2rem;
-    color: rgb(0, 0, 0);
-  }
-  .nav__mobile__navPage .menuPhone a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-  }
-  .nav__mobile__navPage .menuPhone i {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
   }
   .nav__mobile__navPage .search {
     width: 80%;
