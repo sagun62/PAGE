@@ -45,9 +45,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	const xClose = document.querySelector('.x-close');
 	burger.addEventListener('click', function () {
 		navPage.classList.add('active');
+		navPage.classList.remove('hiding');
 	});
 	xClose.addEventListener('click', function () {
-		navPage.classList.remove('active');
+		navPage.classList.add('hiding'); // Dodaje animację zanikania
+		setTimeout(() => {
+			navPage.classList.remove('active'); // Usuwa menu po animacji
+			navPage.classList.remove('hiding'); // Resetuje stan
+		}, 1000); // Czas musi być taki jak w `transition`
 	});
 
 	const moreSubMenuBTN = document.querySelector('.moreSubMenuBTN');

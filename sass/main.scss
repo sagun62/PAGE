@@ -11,6 +11,7 @@
 html {
 	font-size: 55%;
 	letter-spacing: 0.11em;
+	font-weight: 385;
 	word-spacing: 0.05em;
 	scroll-behavior: smooth;
 	color: $mainText-color;
@@ -19,7 +20,7 @@ html {
 body {
 	background-color: $background;
 }
-
+// NAWIGACJA
 .nav {
 	width: 100%;
 	height: 24vh;
@@ -327,7 +328,9 @@ body {
 			}
 		}
 		&__navPage {
-			display: none;
+			// display: none;
+			opacity: 0;
+			visibility: hidden;
 			width: 100%;
 			height: 100%;
 			position: fixed;
@@ -338,14 +341,23 @@ body {
 			justify-content: flex-start;
 			background-color: $background;
 			padding: 2em;
-			overflow-y: auto; //pozwala skrolowac po rozlenieu menu do elemetowna dole, inaczej znikaly(byly ale nie moglem si edo nich dostac)
+			overflow-y: auto; //pozwala skrolowac po rozlenieu menu do elemetowna dole, inaczej znikaly(byly ale nie moglem sie do nich dostac)
+			transform: translateX(-500px);
+			transition: transform 1s ease-in-out, opacity 0.9s ease-in-out,
+				visibility 0.9s;
 			i {
 				padding-top: 1em;
 				font-size: 1.5rem;
 				text-decoration: none;
 			}
 			&.active {
-				display: flex;
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0px);
+			}
+			&.hiding {
+				opacity: 0;
+				transform: translateX(-500px);
 			}
 			&-logo {
 				width: 100%;
@@ -392,7 +404,8 @@ body {
 						visibility: hidden;
 						overflow: hidden;
 
-						transition: transform 0.5s ease-in-out;
+						transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out,
+							visibility 0.3s;
 						transform: translateY(-10px);
 						&.active {
 							opacity: 1;
@@ -400,6 +413,10 @@ body {
 							height: auto;
 							visibility: visible;
 							transform: translateY(0);
+						}
+						&.hiding {
+							opacity: 0;
+							transform: translateX(-10px);
 						}
 						&__subitem {
 							a {
@@ -445,6 +462,13 @@ body {
 						}
 					}
 				}
+			}
+			.box_search-phone {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
 			}
 			.menuPhone {
 				margin: 1em 0 3em 0;
@@ -544,6 +568,8 @@ body {
 		}
 	}
 }
+// NAWIGACJA-KONIEC
+// SLIDER
 .slider {
 	width: 100%;
 	height: 70vh;
@@ -638,6 +664,7 @@ body {
 		flex-direction: row;
 		padding: 0 2rem;
 		&.small {
+			height: 10vh;
 		}
 		&__up {
 			display: none;
