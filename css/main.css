@@ -689,6 +689,10 @@ body {
     text-decoration: none;
     color: rgb(0, 0, 0);
   }
+  .nav__mobile__navPage .menuPhone i {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
   .nav__mobile__navPage .search {
     width: 80%;
   }
