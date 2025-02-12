@@ -23,6 +23,7 @@ body {
 // NAWIGACJA
 .nav {
 	width: 100%;
+	// max-width: 1200px; nwm czy chce to wroci do wrappera nav, bo fixed usuwa. moge usunac fixed i wrapper ogarnie albo zostawic fixed i tu ograniczcy tlyko dziwnie wyglada. DOBRZE ALE dziwnie
 	height: 24vh;
 	background-color: $background;
 	display: flex;
@@ -613,35 +614,55 @@ body {
 .main {
 	background-color: $background;
 }
+// kategorie/kafelki-main
 .categories {
 	width: 100%;
-	height: 45vh;
+	height: 40vh;
+	padding: 1em;
+	aspect-ratio: 1/1;
 	background-color: teal;
 	display: flex;
-	margin-top: 10em;
-	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 6em;
+	margin-bottom: 15em;
+	justify-content: space-between;
 	align-items: center;
 	&__box {
-		width: 25%;
-		height: 45vh;
-		margin: 0 10px;
+		width: 22%;
+		aspect-ratio: 1/1;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		overflow: hidden;
+
 		&__once {
 			background-color: yellow;
 			height: 30vh;
 			width: 100%;
+			aspect-ratio: 1/1;
+			img {
+				width: 100%;
+				aspect-ratio: 1/1;
+				height: 100%;
+				overflow: hidden;
+				display: flex;
+				&:hover {
+					transform: scale(0.9);
+				}
+			}
 		}
 		&__name {
 			margin-top: 1em;
 			background-color: rgb(255, 0, 162);
 			height: 10vh;
+			aspect-ratio: 16/9;
 			width: 100%;
 		}
 	}
 }
+// kategorie/kafelki-main - KONIEC
 .tiles {
 	width: 100%;
 	height: 120vh;
@@ -722,6 +743,13 @@ body {
 	}
 	.slider {
 		margin-top: 10vh;
+	}
+	.categories {
+		&__box {
+			width: 44%;
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
 	}
 }
 @media (max-width: 425px) {
