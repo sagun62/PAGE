@@ -795,10 +795,7 @@ body {
 @media (max-width: 650px) {
 	.categories {
 		&__box {
-			width: 50.1%;
-			&__once {
-				width: 85%;
-			}
+			width: 60%;
 			&__name {
 				font-size: 2rem;
 			}
@@ -825,7 +822,7 @@ body {
 	}
 	.categories {
 		&__box {
-			width: 72%;
+			
 			&__name {
 			}
 		}

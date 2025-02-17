@@ -743,10 +743,7 @@ body {
 }
 @media (max-width: 650px) {
   .categories__box {
-    width: 50.1%;
-  }
-  .categories__box__once {
-    width: 85%;
+    width: 60%;
   }
   .categories__box__name {
     font-size: 2rem;
@@ -763,9 +760,6 @@ body {
   .nav__mobile__icon i {
     padding: 1.5rem;
     font-size: 2rem;
-  }
-  .categories__box {
-    width: 72%;
   }
 }
 @media (max-width: 375px) {
