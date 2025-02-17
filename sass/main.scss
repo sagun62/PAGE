@@ -617,10 +617,10 @@ body {
 // kategorie/kafelki-main
 .categories {
 	width: 100%;
-	height: 40vh;
+	height: auto;
 	padding: 1em;
-	aspect-ratio: 1/1;
-	background-color: teal;
+	// aspect-ratio: 16/9;
+	background-color: $background;
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 6em;
@@ -630,38 +630,66 @@ body {
 	&__box {
 		width: 22%;
 		aspect-ratio: 1/1;
-		height: 100%;
+		height: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		color: $mainText-color;
 		flex-direction: column;
-		overflow: hidden;
-
 		&__once {
-			background-color: yellow;
-			height: 30vh;
+			background-color: $background;
+			height: auto;
 			width: 100%;
 			aspect-ratio: 1/1;
-			img {
+			overflow: hidden;
+			&-img {
 				width: 100%;
 				aspect-ratio: 1/1;
 				height: 100%;
-				overflow: hidden;
 				display: flex;
+				transition: 0.3s ease-in-out;
 				&:hover {
-					transform: scale(0.9);
+					transform: scale(1.1);
+				}
+				&:hover p {
+					color: $thirdText-color;
 				}
 			}
 		}
 		&__name {
-			margin-top: 1em;
-			background-color: rgb(255, 0, 162);
-			height: 10vh;
+			margin-top: 0.6em;
+			background-color: $background;
+			height: 25%;
 			aspect-ratio: 16/9;
 			width: 100%;
+			text-transform: uppercase;
+			font-size: 2.2rem;
+			display: flex;
+			color: $mainText-color;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			transition: 0.5s ease-in-out;
+			&::after {
+				content: '';
+				width: 80%;
+				height: 1px;
+				background-color: $mainText-color;
+				position: absolute;
+				bottom: 8px;
+				transition: 0.2s ease-in-out;
+			}
+			&:hover::after {
+				background-color: $thirdText-color;
+				width: 90%;
+			}
+			&:hover {
+				color: $thirdText-color;
+			}
 		}
 	}
 }
+
 // kategorie/kafelki-main - KONIEC
 .tiles {
 	width: 100%;
@@ -745,10 +773,35 @@ body {
 		margin-top: 10vh;
 	}
 	.categories {
+		justify-content: space-evenly;
 		&__box {
-			width: 44%;
+			width: 35%;
 			margin-top: 1em;
 			margin-bottom: 1em;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.categories {
+		&__box {
+			&__name {
+				margin-top: 0;
+				margin-bottom: 1em;
+			}
+		}
+	}
+}
+// tylko pod kafelki >
+@media (max-width: 650px) {
+	.categories {
+		&__box {
+			width: 50.1%;
+			&__once {
+				width: 85%;
+			}
+			&__name {
+				font-size: 2rem;
+			}
 		}
 	}
 }
@@ -767,6 +820,13 @@ body {
 					padding: 1.5rem;
 					font-size: 2rem;
 				}
+			}
+		}
+	}
+	.categories {
+		&__box {
+			width: 72%;
+			&__name {
 			}
 		}
 	}
@@ -858,6 +918,13 @@ body {
 						font-size: 12px;
 					}
 				}
+			}
+		}
+	}
+	.categories {
+		&__box {
+			&__name {
+				font-size: 1.8rem;
 			}
 		}
 	}
