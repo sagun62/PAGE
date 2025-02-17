@@ -628,6 +628,7 @@ body {
   align-items: center;
   position: relative;
   transition: 0.5s ease-in-out;
+  text-decoration: none;
 }
 .categories__box__name::after {
   content: "";

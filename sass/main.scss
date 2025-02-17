@@ -670,6 +670,7 @@ body {
 			align-items: center;
 			position: relative;
 			transition: 0.5s ease-in-out;
+			text-decoration: none;
 			&::after {
 				content: '';
 				width: 80%;
