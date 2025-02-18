@@ -694,7 +694,7 @@ body {
 // kategorie/kafelki-main - KONIEC
 .tiles {
 	width: 100%;
-	margin-top: 6em;
+	margin-top: 5em;
 	margin-bottom: 8em;
 	display: flex;
 	background-color: $background;
@@ -957,6 +957,52 @@ body {
 			margin-bottom: 1em;
 		}
 	}
+	.tiles {
+		&__up {
+			&__one {
+				&__contentBox {
+					&-content {
+						font-size: 1.8rem;
+					}
+					&-link {
+						font-size: 1rem;
+					}
+				}
+			}
+			&__two {
+				&__contentBox {
+					&-content {
+						font-size: 1.8rem;
+					}
+					&-link {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+		&__down {
+			&__three {
+				&__contentBox {
+					&-content {
+						font-size: 1.8rem;
+					}
+					&-link {
+						font-size: 1rem;
+					}
+				}
+			}
+			&__four {
+				&__contentBox {
+					&-content {
+						font-size: 1.8rem;
+					}
+					&-link {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
 }
 @media (max-width: 768px) {
 	.categories {
@@ -975,6 +1021,28 @@ body {
 			width: 60%;
 			&__name {
 				font-size: 2rem;
+			}
+		}
+	}
+	.tiles {
+		margin-top: 1em;
+		&__up {
+			flex-direction: column;
+			&__one {
+				width: 90%;
+			}
+			&__two {
+				width: 60%;
+			}
+		}
+		&__down {
+			flex-direction: column;
+			&__three {
+				width: 60%;
+				margin-bottom: 2em;
+			}
+			&__four {
+				width: 90%;
 			}
 		}
 	}
@@ -1098,6 +1166,52 @@ body {
 		&__box {
 			&__name {
 				font-size: 1.8rem;
+			}
+		}
+	}
+	.tiles {
+		&__up {
+			&__one {
+				&__contentBox {
+					&-content {
+						font-size: 1.4rem;
+					}
+					&-link {
+						font-size: 0.8rem;
+					}
+				}
+			}
+			&__two {
+				&__contentBox {
+					&-content {
+						font-size: 1.4rem;
+					}
+					&-link {
+						font-size: 0.8rem;
+					}
+				}
+			}
+		}
+		&__down {
+			&__three {
+				&__contentBox {
+					&-content {
+						font-size: 1.4rem;
+					}
+					&-link {
+						font-size: 0.8rem;
+					}
+				}
+			}
+			&__four {
+				&__contentBox {
+					&-content {
+						font-size: 1.4rem;
+					}
+					&-link {
+						font-size: 0.8rem;
+					}
+				}
 			}
 		}
 	}
