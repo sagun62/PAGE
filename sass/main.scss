@@ -695,7 +695,7 @@ body {
 .tiles {
 	width: 100%;
 	margin-top: 6em;
-	margin-bottom: 16em;
+	margin-bottom: 8em;
 	display: flex;
 	background-color: $background;
 	justify-content: center;
@@ -715,34 +715,38 @@ body {
 		overflow: hidden;
 		&__one {
 			width: 60%;
-			position: relative;
 			padding: 1em;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-
-			&-content {
+			position: relative;
+			&__contentBox {
+				width: 90%;
 				position: absolute;
-				font-size: 2.5rem;
-				font-weight: 200;
-				color: $secondText-color;
-				left: 50px;
-				top: 50px;
-			}
-			&-link {
-				position: absolute;
-				right: 40px;
-				top: 200px;
-				border: 1px solid $secondText-color;
-				padding: 1em 4em;
-				font-size: 1.6rem;
-				font-weight: 200;
-				text-decoration: none;
-				color: $secondText-color;
-				transition: 0.3s ease-in-out;
-				&:hover {
-					background-color: $hover-color;
-					transform: scale(0.96);
+				height: 90%;
+				display: flex;
+				justify-content: space-evenly;
+				align-items: flex-start;
+				flex-direction: column;
+				&-content {
+					font-size: 2.4rem;
+					font-weight: 200;
+					color: $secondText-color;
+				}
+				&-link {
+					display: flex;
+					justify-content: left;
+					border: 1px solid $secondText-color;
+					padding: 1em 4em;
+					font-size: 1.4rem;
+					font-weight: 200;
+					text-decoration: none;
+					color: $secondText-color;
+					transition: 0.3s ease-in-out;
+					&:hover {
+						background-color: $hover-color;
+						transform: scale(0.96);
+					}
 				}
 			}
 		}
@@ -753,32 +757,35 @@ body {
 			justify-content: center;
 			align-items: center;
 			position: relative;
-			// transition: 0.3s ease-in-out;
-			// &:hover {
-			// 	transform: scale(0.96);
-			// }
-			&-content {
+			&__contentBox {
+				width: 80%;
 				position: absolute;
-				font-size: 3rem;
-				font-weight: 200;
-				color: $secondText-color;
-				right: 40px;
-				bottom: 40px;
-			}
-			&-link {
-				position: absolute;
-				right: 40px;
-				top: 210px;
-				border: 1px solid $secondText-color;
-				padding: 1em 4em;
-				font-size: 1.6rem;
-				font-weight: 200;
-				text-decoration: none;
-				color: $secondText-color;
-				transition: 0.3s ease-in-out;
-				&:hover {
-					background-color: $hover-color;
-					transform: scale(0.96);
+				height: 80%;
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+				flex-direction: column;
+				&-content {
+					font-size: 2.4rem;
+					font-weight: 200;
+					margin-bottom: 2em;
+					color: $secondText-color;
+				}
+				&-link {
+					display: flex;
+					justify-content: left;
+					border: 1px solid $secondText-color;
+					padding: 1em;
+					padding: 1em 4em;
+					font-size: 1.4rem;
+					font-weight: 200;
+					text-decoration: none;
+					color: $secondText-color;
+					transition: 0.3s ease-in-out;
+					&:hover {
+						background-color: $hover-color;
+						transform: scale(0.96);
+					}
 				}
 			}
 		}
@@ -797,33 +804,36 @@ body {
 			align-items: center;
 			width: 30%;
 			position: relative;
+			&__contentBox {
+				width: 90%;
+				position: absolute;
+				height: 90%;
 
-			// transition: 0.3s ease-in-out;
-			// &:hover {
-			// 	transform: scale(0.96);
-			// }
-			&-content {
-				position: absolute;
-				font-size: 3rem;
-				font-weight: 200;
-				color: $secondText-color;
-				right: 20px;
-				bottom: 30px;
-			}
-			&-link {
-				position: absolute;
-				right: 20px;
-				top: 20px;
-				border: 1px solid $secondText-color;
-				padding: 1em 4em;
-				font-size: 1.6rem;
-				font-weight: 200;
-				text-decoration: none;
-				color: $secondText-color;
-				transition: 0.3s ease-in-out;
-				&:hover {
-					background-color: $hover-color;
-					transform: scale(0.96);
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-start;
+				flex-direction: column;
+				&-content {
+					font-size: 2.4rem;
+					font-weight: 200;
+					margin-bottom: 2em;
+					color: $secondText-color;
+				}
+				&-link {
+					display: flex;
+					justify-content: left;
+					border: 1px solid $secondText-color;
+					margin-bottom: 1em;
+					padding: 1em 4em;
+					font-size: 1.4rem;
+					font-weight: 200;
+					text-decoration: none;
+					color: $secondText-color;
+					transition: 0.3s ease-in-out;
+					&:hover {
+						background-color: $hover-color;
+						transform: scale(0.96);
+					}
 				}
 			}
 		}
@@ -833,36 +843,68 @@ body {
 			align-items: center;
 			width: 60%;
 			position: relative;
-			&-content {
+			&__contentBox {
+				width: 90%;
 				position: absolute;
-				font-size: 3rem;
-				font-weight: 200;
-				color: $secondText-color;
-				right: 2vw;
-				top: 15vh;
-			}
-			&-link {
-				position: absolute;
-				right: 2vw;
-				top: 30vh;
-				border: 1px solid $secondText-color;
-				padding: 1em 4em;
-				font-size: 1.6rem;
-				font-weight: 200;
-				text-decoration: none;
-				color: $secondText-color;
-				transition: 0.3s ease-in-out;
-				&:hover {
-					background-color: $hover-color;
-					transform: scale(0.96);
+				height: 90%;
+				text-align: right;
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				flex-direction: column;
+				&-content {
+					font-size: 2.4rem;
+					font-weight: 200;
+					margin-bottom: 2em;
+					color: $secondText-color;
+				}
+				&-link {
+					display: flex;
+					justify-content: left;
+					border: 1px solid $secondText-color;
+
+					padding: 1em 4em;
+					font-size: 1.4rem;
+					font-weight: 200;
+					text-decoration: none;
+					color: $secondText-color;
+					transition: 0.3s ease-in-out;
+					&:hover {
+						background-color: $hover-color;
+						transform: scale(0.96);
+					}
 				}
 			}
-			// transition: 0.3s ease-in-out;
-			// &:hover {
-			// 	transform: scale(0.96);
-			// }
 		}
 	}
+}
+.bestsellers {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: pink;
+}
+.grawer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(209, 255, 192);
+}
+.chooseUs {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(226, 33, 194);
+}
+.footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(253, 192, 255);
 }
 // MEDIA
 
